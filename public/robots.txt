@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://qpu.land/sitemap-index.xml

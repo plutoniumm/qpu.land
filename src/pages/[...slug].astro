@@ -7,7 +7,6 @@ import TOCList from "../components/TOCList.astro";
 import SEO from "../components/SEO.astro";
 import ExternalNav from "../components/ExternalNav.astro";
 import ColoredTitle from "../components/ColoredTitle.astro";
-import ScrollPadding from "../components/ScrollPadding.astro";
 import OldNav from "../components/OldNav.astro";
 
 export interface Params {
@@ -37,14 +36,6 @@ export async function getStaticPaths() {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-			rel="stylesheet"
-		/>
-
 		<SEO chapterSlug={chapter.slug} />
 	</head>
 	<body>
@@ -117,7 +108,15 @@ export async function getStaticPaths() {
 				}
 			</div>
 
-			<ScrollPadding />
+			<footer class="scroll-padding">
+				<div class="content">
+					<p>
+						<a target="_blank" href="https://github.com/plutoniumm/qpu.land">
+							Open source with ❤︎ on GitHub
+						</a>
+					</p>
+				</div>
+			</footer>
 		</main>
 
 		<script define:vars={{ dev: import.meta.env.DEV }}>

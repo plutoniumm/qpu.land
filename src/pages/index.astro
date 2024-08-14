@@ -6,7 +6,6 @@ import { getEntryBySlug } from "astro:content";
 import SEO from "../components/SEO.astro";
 import ColoredTitle from "../components/ColoredTitle.astro";
 import ExternalNav from "../components/ExternalNav.astro";
-import ScrollPadding from "../components/ScrollPadding.astro";
 
 const intro = await getEntryBySlug("chapters", "intro");
 const chapterOne = await getEntryBySlug("chapters", "the-basics");
@@ -17,27 +16,9 @@ const { Content: Intro } = await intro.render();
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&display=swap"
-			rel="stylesheet"
-		/>
-
 		<SEO chapterSlug="intro" />
 	</head>
 	<body>
-		<a class="orpheus-flag" target="_blank" href="https://hackclub.com/">
-			<img
-				src="/orpheus-flag.svg"
-				width="560"
-				height="315"
-				alt="A project by Hack Club"
-				title="A project by Hack Club"
-			/>
-		</a>
-
 		<header>
 			<img
 				src="/squiggles/top.svg"
@@ -82,7 +63,15 @@ const { Content: Intro } = await intro.render();
 				</a>
 			</div>
 
-			<ScrollPadding />
+			<footer class="scroll-padding">
+				<div class="content">
+					<p>
+						<a target="_blank" href="https://github.com/plutoniumm/qpu.land">
+							Open source with ❤︎ on GitHub
+						</a>
+					</p>
+				</div>
+			</footer>
 		</main>
 	</body>
 </html>

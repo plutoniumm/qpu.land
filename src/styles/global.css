@@ -1,8 +1,8 @@
 :root {
-	--font-serif: 'IBM Plex Serif', serif;
-	--font-sans: 'IBM Plex Sans', sans-serif;
-	--font-mono: 'IBM Plex Mono', monospace;
-	--font-main-title: 'Phantom Sans', 'IBM Plex Serif', serif;
+	--font-serif: serif;
+	--font-sans: sans-serif;
+	--font-mono: monospace;
+	--font-main-title: 'Phantom Sans', serif;
 
 	--toc-width: 0px;
 }
@@ -24,7 +24,9 @@ body {
 	margin: 0;
 }
 
-img, video, iframe {
+img,
+video,
+iframe {
 	width: 100%;
 	height: auto;
 	display: block;
@@ -69,18 +71,24 @@ pre code {
 	font-size: 0.85em;
 }
 
-p, ul:not(li ul), ol:not(li ol), pre, .code-block {
+p,
+ul:not(li ul),
+ol:not(li ol),
+pre,
+.code-block {
 	margin: 20px 0;
 }
 
 blockquote {
 	background: #e9ecef;
-    border-left: 4px solid #868e96;
+	border-left: 4px solid #868e96;
 	margin: 30px 0;
 	padding: 10px 20px;
-    padding-left: 30px;
+	padding-left: 30px;
 
-	& p, & ul:not(li ul), & ol:not(li ol) {
+	& p,
+	& ul:not(li ul),
+	& ol:not(li ol) {
 		margin: 14px 0;
 	}
 }
@@ -126,9 +134,9 @@ hr {
 .big {
 	--max-width: 1300px;
 	--width: calc(max(min(100vw - var(--toc-width) - 50px, var(--max-width)), 100%));
-    width: var(--width);
-    position: relative;
-    left: calc((100% - var(--width)) / 2);
+	width: var(--width);
+	position: relative;
+	left: calc((100% - var(--width)) / 2);
 	margin: 40px auto;
 }
 
@@ -236,7 +244,8 @@ nav.external {
 		}
 	}
 
-	& a, & a:not([href^=\#]):visited {
+	& a,
+	& a:not([href^=\#]):visited {
 		--color: currentColor;
 		--hover-background: #dee2e6;
 		display: block;
@@ -303,38 +312,9 @@ nav.external {
 	background: #adb5bd9b;
 }
 
-.orpheus-flag {
-	position: absolute;
-	top: 0;
-	left: 20px;
-	display: block;
-	width: 140px;
-	transform-origin: top left;
-	z-index: 999;
-
-	& img {
-		width: 100%;
-	}
-
-	&:hover {
-		background: none;
-		animation: orpheus-flag-wave 0.5s linear infinite alternate;
-	}
-}
-
-@keyframes orpheus-flag-wave {
-	0% {
-		transform: rotate(0deg);
-	}
-	
-	100% {
-		transform: rotate(-5deg);
-	}
-}
-
-@page { 
-    size: auto;
-    margin: 0.8in;
+@page {
+	size: auto;
+	margin: 0.8in;
 }
 
 @media print {
@@ -343,7 +323,10 @@ nav.external {
 		font-size: 0.9em;
 	}
 
-	.orpheus-flag, nav.external, .scroll-padding, .edit-button, .continue {
+	nav.external,
+	.scroll-padding,
+	.edit-button,
+	.continue {
 		display: none;
 	}
 
@@ -351,7 +334,12 @@ nav.external {
 		max-width: none;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		page-break-after: avoid;
 		page-break-inside: avoid;
 	}
@@ -379,7 +367,7 @@ nav.external {
 		padding: 0;
 		border-radius: 0;
 	}
-	
+
 	pre span {
 		color: inherit !important;
 	}
@@ -396,7 +384,8 @@ nav.external {
 		text-decoration: underline;
 	}
 
-	a[href^=\#], a[href^=\/] {
+	a[href^=\#],
+	a[href^=\/] {
 		text-decoration: none;
 		font-weight: bold;
 		color: #000000;

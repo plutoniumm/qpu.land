@@ -1,1 +1,0 @@
-// This is a Vercel rewrite in production, see vercel.json.
