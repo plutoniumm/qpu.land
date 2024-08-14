@@ -1,4 +1,7 @@
-<picture>
+## qpu.land
+
+Inspired from [cpu.land](https://cpu.land)
+<!-- <picture>
   <source media='(prefers-color-scheme: dark)' srcset='./public/github-images/banner-dark.png'>
   <img src='./public/github-images/banner-light.png' alt=''>
 </picture>
@@ -24,4 +27,4 @@ And you know what they say... you only truly understand something if you can exp
 
 <br>
 
-<p align='center'><a href='https://cpu.land/the-basics'><strong>Continue to Chapter 1: The "Basics" &raquo;</strong><br>(cpu.land)</a></p>
+<p align='center'><a href='https://cpu.land/the-basics'><strong>Continue to Chapter 1: The "Basics" &raquo;</strong><br>(cpu.land)</a></p> -->
